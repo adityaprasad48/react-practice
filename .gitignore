@@ -19,8 +19,15 @@
 .env.production.local
 
 # cache
+# below two lines are git cmds
+# git rm -rf --cached .
+# git add .
 *.eslintcache
 .cache
+
+
+
+
 
 
 
