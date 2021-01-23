@@ -2,9 +2,10 @@ import { Box, Button, Typography } from "@material-ui/core";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { data } from "../helpers/data";
+import AuthCopy from "./AuthCopy";
 
 let authorization =
-  "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2MTEyMjQ1NTh9.zpTM7JZdLZ-nVQNDn0MKw5wMyub2r_AzANBU0YcKxaQ";
+  "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2MTE0ODkxMzZ9.jEt17y4nwu7s_x-JOwgMlu66kSAtpyIfiG1hxQ3vYW0";
 
 const App = () => {
   const [customers, setCustomers] = useState([]);
@@ -26,7 +27,6 @@ const App = () => {
         console.error(error);
       });
 
-    // console.log(data);
   }, []);
 
   const postCustomer = () => {
@@ -49,6 +49,7 @@ const App = () => {
 
   return (
     <Box>
+      <AuthCopy />
       <Box>
         {customers.map((customer, i) => {
           return (
